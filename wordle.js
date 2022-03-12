@@ -2,4 +2,8 @@
 const string = require("fs").readFileSync("./wordle-words.txt", 'utf8')
 let wordList = string.split("\n")
 
-console.log(wordList)
+function selectAWord(arrayOfWords) {
+    return arrayOfWords[Math.floor(Math.random() * arrayOfWords.length)]
+}
+
+console.log(selectAWord(wordList))
